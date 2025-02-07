@@ -1,0 +1,58 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:img_stitch.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="img_stitch.Views.MainView"
+             x:DataType="vm:MainViewModel">
+	<Grid
+	  HorizontalAlignment="Center"
+	  VerticalAlignment="Top"
+	  Margin="15">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto"></ColumnDefinition>
+			<ColumnDefinition Width="Auto"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<TextBlock Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center">
+			Please Choose Two Images
+		</TextBlock>
+
+		<Grid Grid.Column="0" Grid.Row="1"
+			  HorizontalAlignment="Center">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto"></ColumnDefinition>
+				<ColumnDefinition Width="Auto"></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+			<Border Padding="15" Grid.Column="0" Grid.Row="0">
+				<StackPanel
+						HorizontalAlignment="Stretch"
+						VerticalAlignment="Top"
+						Name="image1">
+					<TextBlock>Left Image</TextBlock>
+					<StackPanel Orientation="Horizontal" Background="LightGray">
+						<Button >Select File</Button>
+						<TextBlock Text="{Binding File1Name}"
+								   VerticalAlignment="Center"
+								   HorizontalAlignment="Center"></TextBlock>
+					</StackPanel>
+				</StackPanel>
+			</Border>
+			<Border Padding="15" Grid.Column="1" Grid.Row="0">
+				<StackPanel
+						HorizontalAlignment="Center"
+						VerticalAlignment="Top"
+						Name="image2">
+					<TextBlock>Right Image</TextBlock>
+				<StackPanel Orientation="Horizontal" Background="LightGray">
+						<Button >Select File</Button>
+						<TextBlock Text="{Binding File1Name}"
+								   VerticalAlignment="Center"
+								   HorizontalAlignment="Center"></TextBlock>
+					</StackPanel>
+				</StackPanel>
+			</Border>
+		</Grid>
+	</Grid>
+
+</UserControl>
