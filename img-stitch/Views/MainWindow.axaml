@@ -7,6 +7,8 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="img_stitch.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
-        Title="img_stitch">
+        Title="img_stitch"
+		MinWidth="800"
+		MinHeight="600">
         <views:MainView />
 </Window>

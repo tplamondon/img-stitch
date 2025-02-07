@@ -3,7 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:img_stitch.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
              x:Class="img_stitch.Views.MainView"
              x:DataType="vm:MainViewModel">
 	<Grid
@@ -26,15 +26,18 @@
 			</Grid.ColumnDefinitions>
 			<Border Padding="15" Grid.Column="0" Grid.Row="0">
 				<StackPanel
-						HorizontalAlignment="Stretch"
+						HorizontalAlignment="Center"
 						VerticalAlignment="Top"
 						Name="image1">
-					<TextBlock>Left Image</TextBlock>
-					<StackPanel Orientation="Horizontal" Background="LightGray">
+					<TextBlock HorizontalAlignment="Center">Left Image</TextBlock>
+					<StackPanel Orientation="Horizontal"
+							Background="LightGray"
+							HorizontalAlignment="Center">
 						<Button >Select File</Button>
 						<TextBlock Text="{Binding File1Name}"
 								   VerticalAlignment="Center"
-								   HorizontalAlignment="Center"></TextBlock>
+								   HorizontalAlignment="Left"
+								   Width="200"></TextBlock>
 					</StackPanel>
 				</StackPanel>
 			</Border>
@@ -43,12 +46,15 @@
 						HorizontalAlignment="Center"
 						VerticalAlignment="Top"
 						Name="image2">
-					<TextBlock>Right Image</TextBlock>
-				<StackPanel Orientation="Horizontal" Background="LightGray">
+					<TextBlock HorizontalAlignment="Center">Right Image</TextBlock>
+				<StackPanel Orientation="Horizontal"
+							Background="LightGray"
+							HorizontalAlignment="Center">
 						<Button >Select File</Button>
 						<TextBlock Text="{Binding File1Name}"
 								   VerticalAlignment="Center"
-								   HorizontalAlignment="Center"></TextBlock>
+								   HorizontalAlignment="Left"
+								   Width="200"></TextBlock>
 					</StackPanel>
 				</StackPanel>
 			</Border>
